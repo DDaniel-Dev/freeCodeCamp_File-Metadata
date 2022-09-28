@@ -3,8 +3,10 @@
 var express = require('express');
 var cors = require('cors');
 const bodyParser = require('body-parser');
+const multer = require('multer');
 require('dotenv').config()
 
+const upload = multer({ dest: 'uploads/' });
 var app = express();
 
 app.use(cors());
