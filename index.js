@@ -1,3 +1,5 @@
+// -- http://localhost:3000/ -- //
+
 var express = require('express');
 var cors = require('cors');
 const bodyParser = require('body-parser');
@@ -14,6 +16,11 @@ app.get('/', function (req, res) {
 });
 
 
+
+app.post("/api/fileanalyse", (req, res) => {
+  console.log(req.body)
+  res.json({ success: true })
+});
 
 
 const port = process.env.PORT || 3000;
